@@ -12,6 +12,23 @@
 	<div id="container">
 
 	<!-- Start your code from here -->
+	<div id="right-container">
+		<div id="counter-container">
+			<div id="char" class="runtime-counter">Character: <span id="char-count">0</span></div>
+			<div id="thread" class="runtime-counter">Threads: <span id="thread-count">0</span></div>
+		</div>
+		<div id="textarea-container">
+			<textarea required name="text" id="textbox" cols="75" rows="20" onkeyup="myfuction(this);" maxlength="275"></textarea>
+		</div>
+		<div id="button-container">
+			<button type="submit" onclick="submit(this);">Thread</button></div>
+	</div>
+	<div id="left-container">
+		<div>
+			<h3 style="text-align: center;"> &#10024; Your threads will appear here &#128293;</h3>
+			<h4 style="text-align: center;">The character limit is 275.</h4>
+		</div>
+	</div>
 
 
 	<!-- End your code -->
@@ -20,7 +37,39 @@
 
 	<script type="text/javascript">
 	// write your javascript code here
+	count = 0;
+	function myfuction(obj){
+		document.getElementById('char-count').innerHTML = obj.value.length;
+	}
+	counArr = []
+	count = 0
+	function submit(obj){
+		let thread = document.getElementById('textbox').value;
+		if(thread.length >0){
+		count += 1;
+		document.getElementById('thread-count').innerHTML = count;
+		let output = '';
 
+		output += `<div id="thread-div">
+			<div style="display:inline-block">
+			<div id="number" style="display:inline-block">
+				${count}
+				</div>
+				<div onclick ="deleteThread(this);" class ="close">X</div></div>
+			<div>${thread}
+			</div>
+			</div>`;
+	
+		document.querySelector('#left-container').innerHTML += output;
+		}
+	}
+
+	function deleteThread(obj){
+		document.querySelector('#thread-div').remove();
+		
+
+
+	}
 	</script>
 
 </body>
