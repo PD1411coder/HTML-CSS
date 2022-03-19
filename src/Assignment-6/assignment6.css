@@ -1,7 +1,126 @@
 /* Our CSS file. */
 
 
-.container, .content {
+#container, .content {
 width: 100%;
 height: 100%;
+display: flex;
 }
+body{
+    background-color: rgb(105, 133, 184);
+}
+
+div#right-container {
+    margin: 4% 1% 0 2%;
+    display: block;
+    width: 60%;
+}
+
+div#counter-container {
+    width: 100%;
+    display: flex;
+    height: 8vh;
+}
+
+.runtime-counter {
+    width: 30%;
+
+    margin: auto;
+    height: 90%;
+    font-family: system-ui;
+    font-size: x-large;
+}
+textarea#textbox {
+    margin: 1% 0 0 9%;
+    border-radius: 8px;
+    border: 3px solid rgb(78, 185, 228);
+}
+
+button {
+    margin: 1% 0 0 9%;
+    width: 84%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: linear-gradient(57deg, skyblue ,blue,rgb(82, 128, 82) );
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+}
+div#button-container {
+    height: 11vh;
+}
+
+div#left-container {
+    margin: 1% 1% 0 1%;
+    display: block;
+    width: 35%;
+    /* height: 100%; */
+    /* background-color: blue; */
+}
+
+#thread-div{
+    width: 70%;
+    height: inherit;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 1%;
+    margin-top: 3vh;
+    margin-left: 5vw;
+    display: block;
+    overflow-wrap: break-word;
+    box-shadow: 6px 6px 5px gray;
+    align-self: center;
+}
+
+#number{
+    width: 3vw;
+    height: 5vh;
+    background-color: darkgreen;
+    overflow-wrap: normal;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    padding-top: 6px;
+    border-radius: 5px;
+    font-size: large;
+    margin-bottom: 1vh;
+
+}
+.close{
+    display: inline-block;  
+    margin-left: 18vw;
+    font-size: large;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+
+}
+/* 
+#counter{
+    display: flex;
+    height: 50%;
+    width: 60%;
+    margin-top: 5%;
+}
+
+.runtime-counter{
+    height: 90%;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+#textbox{
+    border:0; outline:0;
+    padding: 1em;
+    border-radius:8px;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: 'Merriweather', sans-serif;
+    box-shadow:(0 1px 1px rgba(black, 0.1));
+    resize: none;
+}
+
+ */
